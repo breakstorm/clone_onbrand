@@ -1,0 +1,24 @@
+{
+  "name": "clone_onbrand",
+  "version": "1.0.0",
+  "description": "This is a \"https://onbrand.me/\" clone site. If you want to see the result click [this]() and original site click [this](https://onbrand.me/)",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass sass/ --output css/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breakstorm/clone_onbrand.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/breakstorm/clone_onbrand/issues"
+  },
+  "homepage": "https://github.com/breakstorm/clone_onbrand#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}

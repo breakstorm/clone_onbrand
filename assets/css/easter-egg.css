@@ -1,0 +1,159 @@
+.easter-egg-banner {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-align: left;
+    font-size: 16px;
+    color: #22278F;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: rgba(68, 68, 78, 0.2) 1px 1px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    height: 85px;
+    padding: 24px 40px 24px 40px;
+    animation: appear 1s ease;
+    -ms-animation: appear 1s ease;
+    -webkit-animation: appear 1s ease;
+    -moz-animation: appear 1s ease;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    animation-delay: 2.5s;
+    -webkit-animation-delay: 2.5s;
+    -ms-animation-delay: 2.5s;
+    -moz-animation-delay: 2.5s;
+
+
+}
+
+.easter-egg-close {
+    font-size: 22px;
+    color: #FD4256;
+    cursor: pointer;
+    position: absolute;
+       right: 1%;
+    top: 18%;
+    padding: 4px;
+}
+
+@keyframes appear {
+
+
+    100% {
+        bottom: 0;
+
+
+    }
+
+}
+
+@-webkit-keyframes appear {
+
+
+    100% {
+        bottom: 0;
+
+
+    }
+
+}
+
+@-moz-keyframes appear {
+
+
+    100% {
+        bottom: 0;
+
+
+    }
+
+}
+
+}
+
+@-ms-keyframes appear {
+
+
+    100% {
+        bottom: 0;
+
+
+    }
+
+}
+
+}
+
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    width: 200px;
+    top: 100%;
+    left: 50%; 
+    margin-left: -100px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    background-color: #0947FF;
+    cursor: pointer;
+    z-index: 99;
+
+}
+
+.tooltiptext:after {
+content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #0947FF transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* tablet */
+@media (max-width: 1200px) {
+    .easter-egg-banner {
+        height: 105px;
+    
+
+    }
+    
+    .easter-egg-close {
+            top: 14%;
+    }
+}
+
+/* mobile */
+@media (max-width: 600px) {
+    .easter-egg-banner {
+        padding: 24px 40px 40px 40px;
+        font-size: 14px;
+        height: 200px;
+
+    }
+    
+    .easter-egg-close {
+        right: 2%;
+    top: 8%;
+    }
+}

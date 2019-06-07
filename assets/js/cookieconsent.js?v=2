@@ -1,0 +1,300 @@
+function makeCookieInfo(name,provider,duration,type,description){
+	this.name = name;
+	this.provider = provider;
+	this.duration = duration;
+	this.type = type;
+	this.description = description;
+}
+
+var currentsite="onbrand.me";
+
+
+var facebookcookies=true;
+var linkedincookies=true;
+var adwordscookies=true;
+var analyticscookies=true;
+var websitecookies=true;
+var driftcookies=false;
+var pardotcookies=true;
+var biziblecookies=false;
+
+var marketingcookies=Array();
+var analyticalcookies=Array();
+var neccessarycookies=Array();
+if(facebookcookies === true){
+	marketingcookies.push(new makeCookieInfo('Act, c_user, csm, fr, lu, s, presence, p, xs','.facebook.com','Max 1 year after session/update','HTTP','Used by Facebook to deliver a series of advertisement products such as real time bidding from third party advertisers. (internet based targeting)'));
+}
+if(linkedincookies === true){
+marketingcookies.push(new makeCookieInfo('lidc, bcookie, bscookie','.linkedin.com','1 day','HTTP','LinkedIn Uses this cookie for routing data'));
+marketingcookies.push(new makeCookieInfo('L1c','www.linkedin.com','Session','HTTP','LinkedIn browser ID cookie'));
+marketingcookies.push(new makeCookieInfo('BizoID, BizoData, BizoUserMatchHistory, BizoNetworkPartnerIndex','www.linkedin.com','6 months','HTTP','LinkedIn Ad analytics'));
+}
+if(adwordscookies === true){
+marketingcookies.push(new makeCookieInfo('collect','.google-analytics.com','Session','Pixel','Used to send data to Google Analytics about the visitor\'s device and behaviour. Tracks the visitor across devices and marketing channels.'));
+marketingcookies.push(new makeCookieInfo('id','.yieldlab.com','','HTTP','Yieldlab ads tracking code via google adwords'));
+marketingcookies.push(new makeCookieInfo('__ar_v4','.doubleclick.net','5 years','HTTP','DoubleClick tracking code via google adwords'));
+marketingcookies.push(new makeCookieInfo('IDE','.doubleclick.net','','HTTP','DoubleClick tracking code via google adwords'));
+marketingcookies.push(new makeCookieInfo('test_cookie','.doubleclick.net','Session','HTTP','Tests for cookie setting permissions for Doubleclick'));
+marketingcookies.push(new makeCookieInfo('SID, NID, HSID, DV, SIDCC, SSID, APISID, SAPISID','.google.com','Max 1 year after session/update','HTTP','Google adwords tracking code'));
+marketingcookies.push(new makeCookieInfo('rpb,put_,rpx,c,khaos','.rubiconproject.com','Max 1 year after session/update','HTTP','Rubiconproject tracking cookie via Google Adwords'));
+marketingcookies.push(new makeCookieInfo('utm.gif','.google.com','Session','HTTP','Google Analytics pixel tracker'));
+}
+if(pardotcookies === true){
+marketingcookies.push(new makeCookieInfo('pi_opt_in','.bynder.com','1 year','HTTP','This cookie registers if you consent with Pardot tracking'));
+}
+if(biziblecookies === true){
+analyticalcookies.push(new makeCookieInfo('_biz_nA','.bynder.com','1 year','HTTP','This Bizible cookie tracks the number of pages you have seen'));
+analyticalcookies.push(new makeCookieInfo('_biz_pendingA','.bynder.com','1 year','HTTP','This Bizible cookie is an empty container'));
+analyticalcookies.push(new makeCookieInfo('_biz_sid','.bynder.com','Session','HTTP','This Bizible cookie gives the visitor a random session ID (anonymous)'));
+analyticalcookies.push(new makeCookieInfo('_biz_uid','.bynder.com','1 year','HTTP','This Bizible cookie gives the visitor a user ID (anonymous)'));
+}
+if(analyticscookies === true){
+analyticalcookies.push(new makeCookieInfo('_ga',currentsite,'2 years','HTTP','Google Analytics sets a cookie that is used to generate statistical data on how the visitor uses the website (anonymous).'));
+analyticalcookies.push(new makeCookieInfo('_gid',currentsite,'1 day','HTTP','Registers a unique ID that is used to generate statistical data on how the visitor uses the website (anonymous).'));
+analyticalcookies.push(new makeCookieInfo('_gat,_gat_gtag_UA*',currentsite,'Session','HTTP','Used by Google Analytics to throttle request rate'));
+analyticalcookies.push(new makeCookieInfo('test_cookie',currentsite,'Session','HTTP','Tests for cookie setting permissions for Google Analytics'));
+analyticalcookies.push(new makeCookieInfo('__utma',currentsite,'2 years','HTTP','Collects data on the number of times a user has visited the website as well as dates for the first and most recent visit. Used by Google Analytics. (anonymous)'));
+analyticalcookies.push(new makeCookieInfo('__utmt',currentsite,'10 minutes','HTTP','Used to throttle the speed of requests to the server. (anonymous)'));
+analyticalcookies.push(new makeCookieInfo('__utmb',currentsite,'30 minutes','HTTP','Registers a timestamp with the exact time of when the user accessed the website. Used by Google Analytics to calculate the duration of a website visit. (anonymous)'));
+analyticalcookies.push(new makeCookieInfo('__utmz',currentsite,'30 minutes','HTTP','Collects data on where the user came from, what search engine was used, what link was clicked and what search term was used. Used by Google Analytics. (anonymous)'));
+analyticalcookies.push(new makeCookieInfo('__utmx,__utmxx,__utmxx',currentsite,'1,5 years','HTTP','Google Optimize uses this cookie to determine a user\'s inclusion in an experiment. (Only when experiments are live)'));
+analyticalcookies.push(new makeCookieInfo('HOMEPAGEVARIANT',currentsite,'1 year','HTTP','We use various names for A/B testing cookies. They all contain the word VARIANT'));
+analyticalcookies.push(new makeCookieInfo('_hjIncludedInSample',currentsite,'Session','HTTP','We use HotJar for anonymous heatmaps so we can improve our navigation'));
+}
+if(websitecookies === true){
+neccessarycookies.push(new makeCookieInfo('MARKETINGCONSENT',currentsite,'1 year','HTTP','We use this cookie to store your marketing cookie preference'));
+neccessarycookies.push(new makeCookieInfo('cookieBar',currentsite,'2 years','HTTP','We use this cookie to remember if you closed the cookie notification bar (will be replaced 25th May 2018)'));
+neccessarycookies.push(new makeCookieInfo('cfid, USERID, USERHASH',currentsite,'30 years','HTTP','We don\'t use this functional cookie, it\'s set by default by our CMS'));
+neccessarycookies.push(new makeCookieInfo('MOBILEFORMAT, ORIGINALURLTOKEN',currentsite,'Session','HTTP','Is set to TRUE if you are using a mobile device'));
+neccessarycookies.push(new makeCookieInfo('ORIGINALURLTOKEN',currentsite,'Session','HTTP','We don\'t use this functional cookie, it\'s set by default by our CMS'));
+neccessarycookies.push(new makeCookieInfo('orbitAccountType',currentsite,'2 months','HTTP','The type of Orbit account you have (only set after a succesful Orbit login). Only used functionnaly.'));
+neccessarycookies.push(new makeCookieInfo('orbitDomain',currentsite,'2 months','HTTP','The Orbit account domain you have (only set after a succesful Orbit login). Only used functionnaly.'));
+neccessarycookies.push(new makeCookieInfo('__cfduid','*.bynder.com, .cloudflare.com, .hubspot.com, .hs-analytics.net, .hsforms.net, .hs-scripts.com','1 year','HTTP','Used by the content network, Cloudflare, to identify trusted web traffic.'));
+}
+if(driftcookies === true){
+neccessarycookies.push(new makeCookieInfo('drift_aid',currentsite,'Session','HTTP','Drift chat identifier cookie (anonymous)'));
+neccessarycookies.push(new makeCookieInfo('drift_sid',currentsite,'Session','HTTP','Drift chat identifier token for specific browser session (anonymous)'));
+neccessarycookies.push(new makeCookieInfo('driftt_wmd',currentsite,'Session','HTTP','Drift chat boolean indicating the user has dismissed the welcome message in this session'));
+neccessarycookies.push(new makeCookieInfo('DFTT_END_USER_ PREV_BOOTSTRAPPED',currentsite,'2 years','HTTP','Drift boolean indicating the user has previously been authenticated'));
+}
+
+var showconsentboxes=true;
+var cookieinfoloaded=false;
+
+function CCcheck(k){return(document.cookie.match('(^|; )'+k+'=([^;]*)')||0)[2]}
+function CCsetcookie(e,t,i){var o=new Date;o.setTime(o.getTime()+24*i*60*60*1e3);var n="expires="+o.toUTCString();document.cookie=e+"="+t+";"+n+";domain=onbrand.me;path=/";}
+function CCdeletecookie(name){document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT; domain=onbrand.me; path=/';}
+function CCdeleteLegacycookie(name){document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT; domain=www.onbrand.me; path=/';}
+function returntable(container,cookielist){
+	for (index = 0; index < cookielist.length; ++index) {
+    	$(container).append( '<tr><td>' + cookielist[index].name+ '</td><td>' + cookielist[index].provider + '</td><td>' + cookielist[index].description+ '</td><td>' + cookielist[index].duration+ '</td></tr>' );
+    }
+}
+
+CCdeleteLegacycookie('MARKETINGCONSENT');
+
+if(CCcheck('MARKETINGCONSENT') == '1'){
+$("body").append('<div id="cookieconsent" class="cookieconsenten" style="display:none"> <div class="container"> <div class="padding-m"> <div class="row"> <div class="col-md-12"> <h4>This website uses cookies</h4> <p>We place cookies to ensure the website works properly and to provide you with relevant services and marketing content adapted to your preferences. These cookies remember your browser settings and the data you fill out on forms, measure how you use our website and track how you have found us. Please read more about our <a href="https://www.onbrand.me/en/legal/cookie-policy/" target="_blank">use of cookies</a> and our <a href="https://www.onbrand.me/en/legal/privacy-policy/" target="_blank">Privacy Policy</a> updated on May 24th, 2018.</p><div class="cookiechoices"> <span class="cookiebuttoncontainer"> <span class="buttons blue-big-button marketingcookies pull-left savecookiepreferences">Allow all cookies</span> <span class="cookiedetails">Show details</span></span></div><div class="cookieinformation hidden"><div class="col-md-2"></div><div class="col-md-10"><div class="cookiechoices"> <span class="basicclickable dbmobile"> <input type="checkbox" disabled="disabled" checked="checked" id="basicconsent"/> <label for="basicconsent">Functional</label> </span> <span class="dbmobile"><input type="checkbox" disabled="disabled" checked="checked" id="analyticalconsent"/> <label for="analyticalconsent">Analytical</label></span> <span class="dbmobile"><input type="checkbox" checked="checked" id="marketingconsent"/> <label for="marketingconsent">Marketing</label></span> <span class="cookiebuttoncontainer pull-right m30"><span class="buttons blue-big-button btn-sm customcookiepreferences">Save</span></div></div> <ul class="nav-pills nav-stacked col-md-2"> <li class="active"><span data-toggle="pill" href="#basic">Functional</span></li><li><span data-toggle="pill" href="#analytical">Analytical</span></li><li><span data-toggle="pill" href="#marketing">Marketing</span></li></ul> <div class="tab-content col-md-10"> <div id="basic" class="tab-pane fade in active"><p>The cookies listed below are necessary for the proper functioning of our website. These cookies help us, among other things, to track errors in our Website, which allows us to improve the functioning of the Website. These cookies also make sure you can use our Website in a secure environment and also, for example, that you can save your login data and your preferred language, so you will not have to keep entering this every time you use the Website.</p><table class="table"> <thead> <tr> <td>Name</td><td>Provider</td><td>Purpose</td><td>Expiry</td></tr></thead> <tbody class="basiccookiecontent"></tbody> </table> </div><div id="analytical" class="tab-pane fade"> <p>The cookies listed below are analytical cookies, which are cookies that are used to gain insight into the use of the Website and our Products. These cookies allow us to improve the Website in terms of quality and effectivity and help us to understand how visitors interact with our website by collecting and analyzing information anonymously.</p><table class="table"> <thead> <tr> <td>Name</td><td>Provider</td><td>Purpose</td><td>Expiry</td></tr></thead> <tbody class="analyticalcookiecontent"> </tbody> </table> </div><div id="marketing" class="tab-pane fade"> <p>The cookies listed below are marketing cookies, which are cookies that are used by us to be able to improve your browsing experience and to learn your preferences, so that we can improve our marketing strategy and provide you with tailored offers. Marketing cookies are also needed to make use of embedded video services.</p><table class="table"> <thead> <tr> <td>Name</td><td>Provider</td><td>Purpose</td><td>Expiry</td></tr></thead> <tbody class="marketingcookiecontent"> </tbody> </table> </div></div></div></div></div></div></div></div>');
+}else{
+$("body").append('<div id="cookieconsent" class="cookieconsenten" style="display:none"> <div class="container"> <div class="padding-m"> <div class="row"> <div class="col-md-12"> <h4>This website uses cookies</h4> <p>We place cookies to ensure the website works properly and to provide you with relevant services and marketing content adapted to your preferences. These cookies remember your browser settings and the data you fill out on forms, measure how you use our website and track how you have found us. Please read more about our <a href="https://www.onbrand.me/en/legal/cookie-policy/" target="_blank">use of cookies</a> and our <a href="https://www.onbrand.me/en/legal/privacy-policy/" target="_blank">Privacy Policy</a> updated on May 24th, 2018.</p><div class="cookiechoices"> <span class="cookiebuttoncontainer"> <span class="buttons blue-big-button marketingcookies pull-left savecookiepreferences">Allow all cookies</span> <span class="cookiedetails">Show details</span></span></div><div class="cookieinformation hidden"><div class="col-md-2"></div><div class="col-md-10"><div class="cookiechoices"> <span class="basicclickable dbmobile"> <input type="checkbox" disabled="disabled" checked="checked" id="basicconsent"/> <label for="basicconsent">Functional</label> </span> <span class="dbmobile"><input type="checkbox" disabled="disabled" checked="checked" id="analyticalconsent"/> <label for="analyticalconsent">Analytical</label></span> <span class="dbmobile"><input type="checkbox" id="marketingconsent"/> <label for="marketingconsent">Marketing</label></span> <span class="cookiebuttoncontainer pull-right m30"><span class="buttons blue-big-button btn-sm customcookiepreferences">Save</span></div></div> <ul class="nav-pills nav-stacked col-md-2"> <li class="active"><span data-toggle="pill" href="#basic">Functional</span></li><li><span data-toggle="pill" href="#analytical">Analytical</span></li><li><span data-toggle="pill" href="#marketing">Marketing</span></li></ul> <div class="tab-content col-md-10"> <div id="basic" class="tab-pane fade in active"><p>The cookies listed below are necessary for the proper functioning of our website. These cookies help us, among other things, to track errors in our Website, which allows us to improve the functioning of the Website. These cookies also make sure you can use our Website in a secure environment and also, for example, that you can save your login data and your preferred language, so you will not have to keep entering this every time you use the Website.</p><table class="table"> <thead> <tr> <td>Name</td><td>Provider</td><td>Purpose</td><td>Expiry</td></tr></thead> <tbody class="basiccookiecontent"></tbody> </table> </div><div id="analytical" class="tab-pane fade"> <p>The cookies listed below are analytical cookies, which are cookies that are used to gain insight into the use of the Website and our Products. These cookies allow us to improve the Website in terms of quality and effectivity and help us to understand how visitors interact with our website by collecting and analyzing information anonymously.</p><table class="table"> <thead> <tr> <td>Name</td><td>Provider</td><td>Purpose</td><td>Expiry</td></tr></thead> <tbody class="analyticalcookiecontent"> </tbody> </table> </div><div id="marketing" class="tab-pane fade"> <p>The cookies listed below are marketing cookies, which are cookies that are used by us to be able to improve your browsing experience and to learn your preferences, so that we can improve our marketing strategy and provide you with tailored offers. Marketing cookies are also needed to make use of embedded video services.</p><table class="table"> <thead> <tr> <td>Name</td><td>Provider</td><td>Purpose</td><td>Expiry</td></tr></thead> <tbody class="marketingcookiecontent"> </tbody> </table> </div></div></div></div></div></div></div></div>');
+}
+
+if($(".basiccookiecontainer").length>0){
+	returntable(".marketingcookiecontainer",marketingcookies);
+	returntable(".analyticalcookiecontainer",analyticalcookies);
+	returntable(".basiccookiecontainer",neccessarycookies);
+}
+
+$(".cookiedetails").click(function(){
+	$(".cookieinformation").toggleClass("hidden");
+	$(".cookiedetails").toggleClass("active");
+	$("#cookieconsent").toggleClass("open");
+	if($(".cookiedetails").hasClass("active")){
+		$(".cookiedetails").text("Hide details");
+	}else{
+		$(".cookiedetails").text("Show details");
+	}
+	if(cookieinfoloaded == false){
+		returntable(".marketingcookiecontent",marketingcookies);
+		returntable(".basiccookiecontent",neccessarycookies);
+		returntable(".analyticalcookiecontent",analyticalcookies);
+		cookieinfoloaded=true;
+	}
+})
+
+$(".basicclickable").click(function(){
+	if($(".cookieinformation").hasClass("hidden")){
+		$(".cookiedetails").click();
+	}else{
+		$("span[href='#basic']").click();
+	}
+});
+
+var bootstrap_enabled = (typeof $().emulateTransitionEnd == 'function');
+if(!bootstrap_enabled){
+	$(".nav-pills li").each(function(){
+		$(this).click(function(){
+			$(".nav-pills li").removeClass("active");
+			$(this).addClass("active");
+			var tabid=$(this).find("span").attr("href");
+			$(".tab-pane").removeClass("fade").removeClass("in").removeClass("active");
+			$(tabid).addClass("active fade in");
+		});
+	});
+}
+
+if(CCcheck('CONSENTSHOWN') == 'yes'){
+
+}else{
+	$("#cookieconsent").show();
+	if($("#drift-widget-container").length >0){
+		$("#drift-widget-container").css("z-index",1);
+	}
+	$("body").append("<div class='consentoverlay'></div>");
+}
+
+$(".savecookiepreferences").click(function(){
+	if($(this).hasClass("marketingcookies"))
+	{
+		CCsetcookie("MARKETINGCONSENT","1",365);
+		CCsetcookie("CONSENTSHOWN","yes",365);
+		$("#marketingconsent").prop('checked', true);
+		$("script[data-cookieconsent='marketing']").each(function() {
+			eval($(this).text());
+			$(this).attr("data-src","");
+		});
+	}else{
+		if(CCcheck('MARKETINGCONSENT') == '1'){
+			CCsetcookie("MARKETINGCONSENT","0",365);
+			CCsetcookie("CONSENTSHOWN","yes",365);
+			document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
+			CCsetcookie("CONSENTSHOWN","yes",365);
+			location.reload();
+		}else{
+			CCsetcookie("MARKETINGCONSENT","0",365);
+			CCsetcookie("CONSENTSHOWN","yes",365);
+		}
+	}
+
+	$("#cookieconsent").hide();
+	$(".consentoverlay").remove();
+	$("#cookieconsent").removeClass("open");
+	if(!$(".cookieinformation").hasClass("hidden")){$(".cookieinformation").addClass("hidden");}
+	if($("#drift-widget-container").length >0){
+		$("#drift-widget-container").css("z-index",100);
+	}
+	checkCompliance();
+});
+
+$(".customcookiepreferences").click(function(){
+	if($("#marketingconsent:checked").length >0){
+		CCsetcookie("MARKETINGCONSENT","1",365);
+		CCsetcookie("CONSENTSHOWN","yes",365);
+		$("script[data-cookieconsent='marketing']").each(function() {
+			eval($(this).text());
+			$(this).attr("data-src","");
+		});
+	}else{
+		if(CCcheck('MARKETINGCONSENT') == '1'){
+			CCsetcookie("MARKETINGCONSENT","0",365);
+			CCsetcookie("CONSENTSHOWN","yes",365);
+			document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
+			CCsetcookie("CONSENTSHOWN","yes",365);
+			location.reload();
+		}else{
+			CCsetcookie("MARKETINGCONSENT","0",365);
+			CCsetcookie("CONSENTSHOWN","yes",365);
+		}
+	}
+
+	$("#cookieconsent").hide();
+	$(".consentoverlay").remove();
+	$("#cookieconsent").removeClass("open");
+	if(!$(".cookieinformation").hasClass("hidden")){$(".cookieinformation").addClass("hidden");}
+	if($("#drift-widget-container").length >0){
+		$("#drift-widget-container").css("z-index",100);
+	}
+	checkCompliance();
+});
+
+
+if(window.location.host == "developer-docs.bynder.com"){
+	$("iframe[src*='vimeo']").wrap('<div class="vimeoWrapper">');
+	$("iframe[data-src*='vimeo']").wrap('<div class="vimeoWrapper">');
+}
+if($("#legalpage").length > 0){
+	$(".sidenav a").each(function(){
+		$(this).click(function(){
+			console.log("click");
+			setTimeout(function(){
+			if($(".basiccookiecontainer").html()==""){
+				returntable(".marketingcookiecontainer",marketingcookies);
+				returntable(".basiccookiecontainer",neccessarycookies);
+				returntable(".analyticalcookiecontainer",analyticalcookies);
+			}
+		 	}, 1500);
+		});
+	});
+}
+
+var checkCompliance = function(){
+	if(CCcheck('MARKETINGCONSENT') == '1'){
+		$("#resourcesmenu").css("display","block").removeClass("ccboxafter");
+		$(".cookieconsent-optout-marketing").css("display","none").removeClass("ccboxafter");
+		$(".video-container-event").css("display","block").removeClass("ccboxafter");
+		$(".carousel-inner .play").css("display","block").removeClass("ccboxafter");
+		$("iframe[src*='youtube.com']").css("display","block").removeClass("ccboxafter");
+		$("iframe[data-src*='youtube.com']").css("display","block").removeClass("ccboxafter");
+		$("iframe[src*='vimeo']").css("display","block").removeClass("ccboxafter");
+		$("iframe[data-src*='vimeo']").css("display","block").removeClass("ccboxafter");
+		if(window.location.host == "developer-docs.bynder.com"){
+			$("iframe[src*='vimeo']").css("display","block").removeClass("ccboxafter");
+		}
+		CCsetcookie("pi_opt_in","true",365);
+		$("iframe[data-src*='youtube']").each(function(){
+			var datasrc = $(this).attr("data-src");
+			$(this).attr("src",datasrc);
+		});
+		$("iframe[data-src*='vimeo']").each(function(){
+			var datasrc = $(this).attr("data-src");
+			$(this).attr("src",datasrc);
+		});
+		$("script[data-cookieconsent='marketing']").each(function() {
+			eval($(this).text());
+		});
+
+		$(".showcookies").on("click",function() {
+			$("#cookieconsent").show();
+			if($("#drift-widget-container").length >0){
+				$("#drift-widget-container").css("z-index",1);
+			}
+		});
+
+	}else{
+		CCsetcookie("pi_opt_in","false",365);
+		$("iframe[src*='youtube.com']").css("display","none");
+		$("iframe[data-src*='youtube.com']").css("display","none");
+		$("#resourcesmenu").css("display","none");
+		$(".video-container-event").css("display","none");
+
+		if(!$(".video-container-event").hasClass("ccboxafter")){
+			$(".video-container-event").after('<div class="cookieconsent-optout-marketing padding-xl cookieconsent-border"><div><p>To view this embedded video content, you must accept marketing cookies.</p><p><a href="javascript:void(0)" class="btn btn-primary showcookies">Adjust your cookie preferences</a></p></div></div>');
+		}
+		if(!$(".carousel-inner .play").hasClass("ccboxafter")){
+			$(".carousel-inner .play").after('<div class="cookieconsent-optout-marketing padding-xl"><div><p class="consentfont-s">To view this embedded video content, you must accept marketing cookies.</p><p><a href="javascript:void(0)" class="btn btn-inverse showcookies">Adjust your cookie preferences</a></p></div></div>');
+		}
+
+		$("#resourcesmenu").addClass("ccboxafter");
+		$(".video-container-event").addClass("ccboxafter");
+		$(".showcookies").on("click",function() {
+			$("#cookieconsent").show();
+			if($("#drift-widget-container").length >0){
+				$("#drift-widget-container").css("z-index",1);
+			}
+		});
+
+	}
+}
+
+checkCompliance();
+

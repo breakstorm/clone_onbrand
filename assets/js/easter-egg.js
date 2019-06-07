@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){$('.easter-egg-close').click(function(){$('.easter-egg-banner').fadeOut(300);sessionStorage.setItem('closedOnce','1');});if(sessionStorage.getItem('closedOnce')==="1"){$('.easter-egg-banner').hide();}});

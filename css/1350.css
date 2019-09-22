@@ -1,0 +1,16 @@
+body {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600; }
+
+.header {
+  position: fixed;
+  background: transprarent; }
+
+.header__buttonset {
+  display: flex;
+  flex-flow: row-reverse wrap; }
+
+.main__section1 {
+  height: 780px;
+  background-color: #0847ff; }

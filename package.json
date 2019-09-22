@@ -4,7 +4,7 @@
   "description": "This is a \"https://onbrand.me/\" clone site. If you want to see the result click [this]() and original site click [this](https://onbrand.me/)",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass sass/ --output css/",
+    "sass": "node-sass -rw sass/ --output css/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
